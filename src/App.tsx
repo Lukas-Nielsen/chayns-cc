@@ -1,6 +1,6 @@
 import { useForm } from "@mantine/form";
 import { IForm } from "./model";
-import { Center, ColorInput, Image, SegmentedControl, Stack, Text, TextInput, Title } from "@mantine/core";
+import { Button, Center, ColorInput, Image, SegmentedControl, Stack, TextInput, Title } from "@mantine/core";
 import { Icon } from "./Icons";
 
 function App() {
@@ -56,6 +56,14 @@ function App() {
 						description="Label für das Innere des QR-Codes"
 						color={form.getValues().color}
 					/>
+					<Button
+						component="a"
+						target="_blank"
+						download
+						href={`https://cube.tobit.cloud/qr-code-generator/v1.0/${form.getValues().format}/?${params.toString()}`}
+					>
+						Download
+					</Button>
 					<Stack
 						style={{ position: "sticky", boxShadow: "0 -3px 3px -3px rgba(0, 0, 0, 0.2)" }}
 						bottom="0"
