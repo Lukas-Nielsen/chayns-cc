@@ -58,26 +58,18 @@ function App() {
 							/>
 							<SegmentedControl
 								key={form.key("format")}
-								data={["PNG", "SVG", "JPG", "PDF"]}
+								data={["PNG", "SVG", "JPG"]}
 								{...form.getInputProps("format")}
 							/>
 						</Stack>
 					</form>
 					<Center>
-						{form.getValues().format === "PDF" && (
-							<iframe
-								src={`https://cube.tobit.cloud/qr-code-generator/v1.0/PDF/?${params.toString()}`}
-								style={{ width: "25rem", maxWidth: "75vw", height: "25rem", maxHeight: "75vw" }}
-							/>
-						)}
-						{form.getValues().format !== "PDF" && (
-							<Image
-								src={`https://cube.tobit.cloud/qr-code-generator/v1.0/${form.getValues().format}/?${params.toString()}`}
-								alt="Calling Code"
-								w="25rem"
-								maw="75vw"
-							/>
-						)}
+						<Image
+							src={`https://cube.tobit.cloud/qr-code-generator/v1.0/${form.getValues().format}/?${params.toString()}`}
+							alt="Calling Code"
+							w="25rem"
+							maw="75vw"
+						/>
 					</Center>
 				</Stack>
 			</Center>
