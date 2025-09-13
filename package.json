@@ -33,7 +33,7 @@
 		"postcss-simple-vars": "^7.0.1",
 		"prettier": "^3.6.2",
 		"typescript": "^5.9.2",
-		"vite": "^7.1.1",
+		"vite": "^7.1.5",
 		"vite-plugin-oxlint": "^1.4.0"
 	},
 	"overrides": {
