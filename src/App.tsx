@@ -1,7 +1,8 @@
-import { useForm } from "@mantine/form";
-import { IForm } from "./model";
 import { Button, Center, ColorInput, Image, SegmentedControl, Stack, TextInput, Title } from "@mantine/core";
+import { useForm } from "@mantine/form";
+
 import { Icon } from "./Icons";
+import { IForm } from "./model";
 
 function App() {
 	const form = useForm<IForm>({
@@ -36,18 +37,8 @@ function App() {
 						label="Inhalt"
 						description="Inhalt für den Calling Code, Text oder URL"
 					/>
-					<ColorInput
-						key={form.key("color")}
-						{...form.getInputProps("color")}
-						label="Farbe des Rings"
-						description=""
-					/>
-					<TextInput
-						key={form.key("text")}
-						{...form.getInputProps("text")}
-						label="Beschriftung"
-						description="Beschriftung für den Ring"
-					/>
+					<ColorInput key={form.key("color")} {...form.getInputProps("color")} label="Farbe des Rings" description="" />
+					<TextInput key={form.key("text")} {...form.getInputProps("text")} label="Beschriftung" description="Beschriftung für den Ring" />
 					<Icon
 						key={form.key("icon")}
 						value={form.getInputProps("icon").value}
@@ -79,11 +70,7 @@ function App() {
 							/>
 						</Center>
 
-						<SegmentedControl
-							key={form.key("format")}
-							data={["PNG", "SVG", "JPG"]}
-							{...form.getInputProps("format")}
-						/>
+						<SegmentedControl key={form.key("format")} data={["PNG", "SVG", "JPG"]} {...form.getInputProps("format")} />
 					</Stack>
 				</Stack>
 			</Center>

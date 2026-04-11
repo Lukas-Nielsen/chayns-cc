@@ -1,4 +1,5 @@
 import { Radio, Group, Image } from "@mantine/core";
+
 import { IIcon } from "./model";
 
 const data: { value: IIcon }[] = [

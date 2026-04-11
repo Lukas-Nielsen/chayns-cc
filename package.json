@@ -1,44 +1,38 @@
 {
 	"name": "chayns-cc",
-	"private": true,
 	"version": "0.0.0",
+	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev": "vite",
-		"build": "tsc -b && vite build",
-		"preview": "vite preview",
-		"format": "prettier -w ."
-	},
-	"prettier": {
-		"printWidth": 120,
-		"singleQuote": false,
-		"useTabs": true,
-		"tabWidth": 4
+		"dev": "vp dev",
+		"build": "tsc -b && vp build",
+		"preview": "vp preview",
+		"format": "vp fmt .",
+		"prepare": "vp config"
 	},
 	"dependencies": {
-		"@mantine/core": "^8.3.0",
-		"@mantine/form": "^8.3.0",
-		"@mantine/hooks": "^8.0.0",
-		"react": "^19.2.0",
-		"react-dom": "^19.2.0"
+		"@mantine/core": "^9.0.1",
+		"@mantine/form": "^9.0.1",
+		"@mantine/hooks": "^9.0.1",
+		"react": "^19.2.5",
+		"react-dom": "^19.2.5"
 	},
 	"devDependencies": {
-		"@types/react": "^19.2.0",
-		"@types/react-dom": "^19.2.0",
-		"@vitejs/plugin-react": "^5.1.0",
-		"globals": "^17.1.0",
-		"oxlint": "^1.42.0",
-		"postcss": "^8.5.6",
+		"@types/react": "^19.2.14",
+		"@types/react-dom": "^19.2.3",
+		"@vitejs/plugin-react": "^6.0.1",
+		"globals": "^17.4.0",
+		"postcss": "^8.5.9",
 		"postcss-preset-mantine": "^1.18.0",
 		"postcss-simple-vars": "^7.0.1",
-		"prettier": "^3.8.1",
-		"typescript": "^5.9.2",
-		"vite": "^7.3.1",
-		"vite-plugin-oxlint": "^1.6.0"
+		"typescript": "^6.0.2",
+		"vite": "catalog:",
+		"vite-plus": "catalog:"
 	},
 	"overrides": {
 		"vite-plugin-oxlint": {
 			"vite": "$vite"
 		}
-	}
+	},
+	"packageManager": "pnpm@10.33.0"
 }

@@ -1,3 +1,4 @@
-build/**
-node_modules/**
-**.tsbuildinfo
+node_modules
+build
+dev-dist
+.pnpm-store
