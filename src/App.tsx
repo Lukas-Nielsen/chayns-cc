@@ -1,6 +1,5 @@
 import { Button, Center, ColorInput, Image, SegmentedControl, Stack, TextInput, Title } from "@mantine/core";
 import { useForm } from "@mantine/form";
-
 import { Icon } from "./Icons";
 import { IForm } from "./model";
 
